@@ -1,0 +1,95 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #250935 0%, #470707 100%);
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+body::before, body::after {
+  content: "🌸";
+  position: absolute;
+  font-size: 8rem;
+  opacity: 0.1;
+  animation: float 10s infinite ease-in-out alternate;
+}
+
+body::before {
+  top: 10%;
+  left: 15%;
+}
+
+body::after {
+  bottom: 10%;
+  right: 15%;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-30px); }
+}
+
+.login-box {
+  background-color: #ffffff;
+  padding: 30px 36px;
+  border-radius: 14px;
+  width: 320px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  text-align: center;
+}
+
+.login-box h2 {
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin-bottom: 6px;
+  color: #4a4a4a;
+  font-size: 14px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #100718;
+  box-shadow: 0 0 0 3px rgba(66, 24, 180, 0.08);
+}
+
+button {
+  width: 100%;
+  padding: 11px;
+  border: none;
+  border-radius: 10px;
+  background-color: #5927b4bb;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform .12s ease, background-color .12s ease;
+}
+
+button:hover { transform: translateY(-2px); background-color: #bbbbbb; }
+
+.resultado {
+  margin-top: 16px;
+  color: #333;
+  font-size: 14px;
+  word-break: break-word;
+}
